@@ -1,0 +1,62 @@
+body {
+    background-color: #000;
+    color: white;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    overflow: hidden;
+}
+
+.app-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.top-bar {
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background: #111;
+}
+
+.canvas-wrapper {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #1a1a1a;
+    padding: 20px;
+}
+
+#mainCanvas {
+    max-width: 100%;
+    max-height: 80%;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+.bottom-nav {
+    height: 70px;
+    background: #111;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-top: 1px solid #333;
+}
+
+.tool-item {
+    cursor: pointer;
+    text-align: center;
+    font-size: 12px;
+}
+
+.tool-panel {
+    position: absolute;
+    bottom: 70px;
+    width: 100%;
+    background: #111;
+    height: 150px;
+    display: none;
+    border-top: 1px solid #333;
+}
+
