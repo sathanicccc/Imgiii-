@@ -191,4 +191,33 @@ body {
 @keyframes splashFadeOut {
     to { opacity: 0; visibility: hidden; transform: scale(1.1); }
 }
+/* ടൂൾ പാനലുകൾ കൃത്യമായി കാണാൻ ബോർഡർ ആഡ് ചെയ്യുക */
+.bottom-nav {
+    height: 70px;
+    background: #1a1a1a; /* കുറച്ചുകൂടി തെളിഞ്ഞ കറുപ്പ് */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-top: 2px solid #ff0000; /* Red line for Sathanic vibe */
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.tool-item span {
+    color: white;
+    font-weight: bold;
+    display: block;
+    margin-top: 5px;
+}
+
+/* ക്യാൻവാസ് ഏരിയ അല്പം കൂടി ഉയർത്തുക */
+.canvas-wrapper {
+    height: calc(100vh - 120px); /* ടൂൾ ബാർ കഴിഞ്ഞ് ബാക്കി സ്ഥലം */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+    margin-top: 50px;
+}
 
