@@ -92,3 +92,33 @@ body {
     border: 2px solid #00ff00;
 }
 
+.sticker-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    padding: 10px;
+    overflow-y: auto;
+}
+
+.sticker-item {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.sticker-item:active {
+    transform: scale(1.2);
+}
+
+/* ലെയർ കാണിക്കുന്ന പാളി */
+.layer-tray {
+    background: #222;
+    padding: 5px;
+    display: flex;
+    gap: 10px;
+    height: 40px;
+    align-items: center;
+    border-bottom: 1px solid #333;
+}
+
