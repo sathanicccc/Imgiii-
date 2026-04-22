@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pro Photo Editor - Sathanic Edit</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Lobster&family=Bebas+Neue&family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="app-container">
+    <div class="top-bar">
+        <button id="export-btn">EXPORT</button>
+        <input type="file" id="upload-input" hidden accept="image/*">
+        <button onclick="document.getElementById('upload-input').click()">UPLOAD</button>
+    </div>
+
+    <div class="canvas-wrapper">
+        <canvas id="mainCanvas"></canvas>
+    </div>
+
+    <div class="layer-tray" id="layerTray">
+        <span>Layers: </span>
+        </div>
+
+    <div class="bottom-nav">
+        <div class="tool-item" onclick="showTools('filter-panel')">
+            <span>Filters</span>
+        </div>
+        <div class="tool-item" onclick="showTools('font-panel')">
+            <span>Text/Fonts</span>
+        </div>
+        <div class="tool-item" onclick="showTools('overlay-panel')">
+            <span>Overlay</span>
+        </div>
+        <div class="tool-item" onclick="showTools('adjust-panel')">
+            <span>Adjust</span>
+        </div>
+    </div>
+
+    <div id="filter-panel" class="tool-panel">
+        <h3>100+ Effects</h3>
+        <div class="filter-list" id="filterList"></div>
+    </div>
+</div>
+
+<script src="fonts.js"></script>
+<script src="filters.js"></script>
+<script src="editor.js"></script>
+</body>
+</html>
+
