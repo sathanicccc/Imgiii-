@@ -39,6 +39,13 @@
         </div>
     </div>
 
+    <div id="overlay-panel" class="tool-panel">
+    <h3>Overlay Tools</h3>
+    <input type="file" id="overlay-upload" hidden accept="image/*" onchange="addOverlayImage(event)">
+    <button class="pro-btn" onclick="document.getElementById('overlay-upload').click()">+ Add Overlay</button>
+    <div id="layerTray" class="layer-tray"></div>
+</div>
+
     <div id="filter-panel" class="tool-panel">
         <h3>100+ Effects</h3>
         <div class="filter-list" id="filterList"></div>
@@ -50,4 +57,5 @@
 <script src="editor.js"></script>
 </body>
 </html>
+
 
