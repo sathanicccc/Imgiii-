@@ -9,56 +9,6 @@
 </head>
 <body>
 
-<div class="app-container">
-    <div class="top-bar">
-        <button id="export-btn">EXPORT</button>
-        <input type="file" id="upload-input" hidden accept="image/*">
-        <button onclick="document.getElementById('upload-input').click()">UPLOAD</button>
-    </div>
-
-    <div class="canvas-wrapper">
-        <canvas id="mainCanvas"></canvas>
-    </div>
-
-    <div class="layer-tray" id="layerTray">
-        <span>Layers: </span>
-        </div>
-
-    <div class="bottom-nav">
-        <div class="tool-item" onclick="showTools('filter-panel')">
-            <span>Filters</span>
-        </div>
-        <div class="tool-item" onclick="showTools('font-panel')">
-            <span>Text/Fonts</span>
-        </div>
-        <div class="tool-item" onclick="showTools('overlay-panel')">
-            <span>Overlay</span>
-        </div>
-        <div class="tool-item" onclick="showTools('adjust-panel')">
-            <span>Adjust</span>
-        </div>
-    </div>
-
-    <div id="overlay-panel" class="tool-panel">
-    <h3>Overlay Tools</h3>
-    <input type="file" id="overlay-upload" hidden accept="image/*" onchange="addOverlayImage(event)">
-    <button class="pro-btn" onclick="document.getElementById('overlay-upload').click()">+ Add Overlay</button>
-    <div id="layerTray" class="layer-tray"></div>
-</div>
-
-    <div id="filter-panel" class="tool-panel">
-        <h3>100+ Effects</h3>
-        <div class="filter-list" id="filterList"></div>
-    </div>
-</div>
-
-<script src="fonts.js"></script>
-<script src="filters.js"></script>
-<script src="editor.js"></script>
-</body>
-</html>
-
-<body>
     <div id="splash-screen">
         <div class="welcome-text">
             <h1 class="animate-pop-in">WELCOME TO</h1>
@@ -70,13 +20,66 @@
     </div>
 
     <div class="app-container" id="main-app" style="display: none;">
+        
+        <div class="top-bar">
+            <button id="export-btn">EXPORT</button>
+            <input type="file" id="upload-input" hidden accept="image/*">
+            <button onclick="document.getElementById('upload-input').click()">UPLOAD</button>
         </div>
 
+        <div class="canvas-wrapper">
+            <canvas id="mainCanvas"></canvas>
+        </div>
+
+        <div class="layer-tray" id="layerTray">
+            <span>Layers: </span>
+        </div>
+
+        <div class="bottom-nav">
+            <div class="tool-item" onclick="showTools('filter-panel')">
+                <span>Filters</span>
+            </div>
+            <div class="tool-item" onclick="showTools('font-panel')">
+                <span>Text/Fonts</span>
+            </div>
+            <div class="tool-item" onclick="showTools('overlay-panel')">
+                <span>Overlay</span>
+            </div>
+            <div class="tool-item" onclick="showTools('adjust-panel')">
+                <span>Adjust</span>
+            </div>
+        </div>
+
+        <div id="overlay-panel" class="tool-panel">
+            <h3>Overlay Tools</h3>
+            <input type="file" id="overlay-upload" hidden accept="image/*" onchange="addOverlayImage(event)">
+            <button class="pro-btn" onclick="document.getElementById('overlay-upload').click()">+ Add Overlay</button>
+        </div>
+
+        <div id="filter-panel" class="tool-panel">
+            <h3>100+ Effects</h3>
+            <div class="filter-list" id="filterList"></div>
+        </div>
+
+        <div id="font-panel" class="tool-panel">
+            <h3>Fonts</h3>
+            <div id="fontList" class="font-grid"></div>
+        </div>
+
+        <div id="adjust-panel" class="tool-panel">
+            <h3>AI Tools</h3>
+            <button class="pro-btn" onclick="removeBackground()">Remove Background</button>
+            <p id="ai-status"></p>
+        </div>
+
+    </div>
+
     <script src="splash.js"></script> 
-    
     <script src="fonts.js"></script>
     <script src="filters.js"></script>
-    <script src="layers.js"></script> <script src="editor.js"></script>
+    <script src="layers.js"></script> 
+    <script src="background.js"></script>
+    <script src="editor.js"></script>
 </body>
-
-
+</html>
+￼Enter
